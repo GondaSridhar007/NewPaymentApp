@@ -9,12 +9,12 @@
         android:id="@+id/layDropDown"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
         android:background="@drawable/drop_down_bg">
 
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_30sdp"
             android:gravity="center" />
     </RelativeLayout>
 

@@ -1,5 +1,6 @@
 package com.testing.newapp;
 
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import com.testing.newapp.fragmentUI.PaymentInsertCard;
 
 public class MainActivity extends AppCompatActivity {
     private static MainActivity mainActivity;
+    long SPLASH_DELAY = 1000;
 
     public static MainActivity getInstance() {
         return mainActivity;
@@ -20,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mainActivity = this;
-//        loadFragmentUI("PaymentCharging");
-        loadFragmentUI("PaymentInsert");
+        loadFragmentUI("PaymentCharging");
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadFragmentUI("PaymentInsert");
+            }
+        }, SPLASH_DELAY);
     }
 
     public void loadFragmentUI(String type) {
