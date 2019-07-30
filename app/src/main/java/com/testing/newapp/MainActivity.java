@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.testing.newapp.fragmentUI.PaymentChargingFragment;
+import com.testing.newapp.fragmentUI.PaymentDisconnected;
 import com.testing.newapp.fragmentUI.PaymentInsertCard;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 loadFragmentUI("PaymentInsert");
+                loadDisconnected();
+            }
+        }, SPLASH_DELAY);
+    }
+
+    private void loadDisconnected() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadFragmentUI("Disconnected");
             }
         }, SPLASH_DELAY);
     }
@@ -42,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
             case "PaymentInsert":
                 Fragment paymentInsertFragment = new PaymentInsertCard();
                 transaction.replace(R.id.frameLoader, paymentInsertFragment);
+                transaction.commit();
+                break;
+            case "Disconnected":
+                Fragment disconnectedFragment = new PaymentDisconnected();
+                transaction.replace(R.id.frameLoader, disconnectedFragment);
                 transaction.commit();
                 break;
         }
