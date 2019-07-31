@@ -23,7 +23,7 @@
                 android:layout_centerVertical="true"
                 android:layout_margin="@dimen/_8sdp"
                 android:text="Amount Due : "
-                android:textColor="@color/colorBlack"
+                android:textColor="#2F2F2F"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
                 android:layout_centerVertical="true"
                 android:layout_margin="@dimen/_8sdp"
                 android:text="$272.78"
-                android:textColor="@color/colorBlack"
+                android:textColor="#2F2F2F"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -398,7 +398,7 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:text="View Details"
-                android:textColor="@color/colorTxt"
+                android:textColor="#2F2F2F"
                 android:textSize="@dimen/_10sdp" />
 
             <ImageView
@@ -444,7 +444,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
             android:text="Please insert card"
-            android:textColor="@color/NormalTextColor"
+            android:textColor="#2F2F2F"
             android:textSize="@dimen/_15sdp"
             android:textStyle="bold" />
 
@@ -487,7 +487,7 @@
 
             <ImageView
                 android:id="@+id/imgPayCard1"
-                android:layout_width="@dimen/_180sdp"
+                android:layout_width="@dimen/_150sdp"
                 android:layout_height="@dimen/_150sdp"
                 android:src="@drawable/ic_payment" />
 
@@ -499,35 +499,13 @@
                 android:visibility="gone" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="@dimen/_180sdp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_4sdp"
-            android:layout_marginBottom="@dimen/_4sdp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0.5dp"
-                android:layout_weight="1"
-                android:background="@color/colorViewBackGroundLine" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_5sdp"
-                android:text="OR"
-                android:textColor="@color/colorViewBackGroundLine"
-                android:textSize="@dimen/_10sdp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0.5dp"
-                android:layout_weight="1"
-                android:background="@color/colorViewBackGroundLine" />
-        </LinearLayout>
+            android:layout_margin="@dimen/_5sdp"
+            android:text="Additional Payment Options"
+            android:textColor="#7C7C7C"
+            android:textSize="@dimen/_10sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -536,6 +514,7 @@
             android:weightSum="2">
 
             <Button
+                android:id="@+id/butPay"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginStart="@dimen/_10sdp"
@@ -544,10 +523,11 @@
                 android:background="@drawable/button_bg"
                 android:text="Pay Cash"
                 android:textAllCaps="false"
-                android:textColor="@color/colorWhite"
+                android:textColor="#FDFDFD"
                 android:textSize="@dimen/_10sdp" />
 
             <Button
+                android:id="@+id/butPaySlitPay"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginStart="@dimen/_5sdp"
@@ -556,7 +536,7 @@
                 android:background="@drawable/button_bg"
                 android:text="Split Payment"
                 android:textAllCaps="false"
-                android:textColor="@color/colorWhite"
+                android:textColor="#FDFDFD"
                 android:textSize="@dimen/_10sdp" />
         </LinearLayout>
     </LinearLayout>
