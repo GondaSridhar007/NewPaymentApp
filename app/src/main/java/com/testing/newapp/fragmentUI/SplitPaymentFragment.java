@@ -76,5 +76,31 @@ public class SplitPaymentFragment extends Fragment {
                 }
             }
         });
+        butSplitChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isLayAmountInfoDropDownVisibility) {
+                    laySplitAmountInfoDropDown.setVisibility(View.GONE);
+                    isLayAmountInfoDropDownVisibility = false;
+                    imaArrow1.setRotation(270);
+                    imaArrow2.setRotation(270);
+                    imgPayCard1.setVisibility(View.VISIBLE);
+                    imgPayCard2.setVisibility(View.GONE);
+                }
+            }
+        });
+        butSplitPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isLayAmountInfoDropDownVisibility) {
+                    laySplitAmountInfoDropDown.setVisibility(View.GONE);
+                    isLayAmountInfoDropDownVisibility = false;
+                    imaArrow1.setRotation(270);
+                    imaArrow2.setRotation(270);
+                    imgPayCard1.setVisibility(View.VISIBLE);
+                    imgPayCard2.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 }
