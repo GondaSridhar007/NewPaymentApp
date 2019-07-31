@@ -27,7 +27,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5sdp"
-                android:text="Waiting on charges....."
+                android:text="Waiting on Charges..."
+                android:textColor="#000000"
                 android:textSize="@dimen/_15sdp" />
 
             <ProgressBar
@@ -45,8 +46,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_20sdp"
-                android:text="You will receive a notification."
-                android:textSize="@dimen/_13sdp" />
+                android:gravity="center"
+                android:text="Your Operations Manager is approving charges.The payment screen will appear soon."
+                android:textColor="#000000"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:text="To cancel, close this window or tap the Back button."
+                android:textColor="#000000"
+                android:textSize="@dimen/_10sdp" />
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
