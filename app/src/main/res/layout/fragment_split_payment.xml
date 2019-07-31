@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/layAmountInDetails"
+        android:id="@+id/laySplitAmountInDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/amount_bg">
 
         <RelativeLayout
-            android:id="@+id/layAmountInfo"
+            android:id="@+id/laySplitAmountInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -22,7 +21,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="@dimen/_8sdp"
-                android:text="Amount Due : "
+                android:text="Payment Amount (Split):"
                 android:textColor="#2F2F2F"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
@@ -33,17 +32,17 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="@dimen/_8sdp"
-                android:text="$272.78"
+                android:text="$500.00"
                 android:textColor="#2F2F2F"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/layAmountInfoDropDown"
+            android:id="@+id/laySplitAmountInfoDropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/layAmountInfo"
+            android:layout_below="@+id/laySplitAmountInfo"
             android:background="@color/colorWhite"
             android:orientation="vertical"
             android:visibility="gone">
@@ -379,10 +378,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layViewDetails"
+            android:id="@+id/laySplitViewDetails"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_25sdp"
-            android:layout_below="@+id/layAmountInfoDropDown"
+            android:layout_below="@+id/laySplitAmountInfoDropDown"
             android:background="@drawable/view_details_bg"
             android:gravity="center"
             android:orientation="horizontal">
@@ -413,16 +412,18 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/layPayOptions"
+        android:id="@+id/laySplitPayOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_5sdp"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -481,7 +482,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layInputCard"
+            android:id="@+id/laySplitInputCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
@@ -516,7 +517,7 @@
             android:weightSum="2">
 
             <Button
-                android:id="@+id/butPay"
+                android:id="@+id/butSplitPay"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginStart="@dimen/_10sdp"
@@ -529,14 +530,14 @@
                 android:textSize="@dimen/_10sdp" />
 
             <Button
-                android:id="@+id/butPaySlitPay"
+                android:id="@+id/butSplitChange"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_weight="1"
                 android:background="@drawable/button_bg"
-                android:text="Split Payment"
+                android:text="Change Split"
                 android:textAllCaps="false"
                 android:textColor="#FDFDFD"
                 android:textSize="@dimen/_10sdp" />
@@ -544,13 +545,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layPaymentProcessing"
+        android:id="@+id/laySplitPaymentProcessing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_2ssp"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:visibility="gone">
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="@dimen/_40sdp"
@@ -586,5 +586,4 @@
                 android:src="@drawable/ic_payment" />
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

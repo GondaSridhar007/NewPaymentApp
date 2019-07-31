@@ -9,10 +9,11 @@ import android.os.Bundle;
 import com.testing.newapp.fragmentUI.PaymentChargingFragment;
 import com.testing.newapp.fragmentUI.PaymentDisconnected;
 import com.testing.newapp.fragmentUI.PaymentInsertCard;
+import com.testing.newapp.fragmentUI.SplitPaymentFragment;
 
 public class MainActivity extends AppCompatActivity {
     private static MainActivity mainActivity;
-    long SPLASH_DELAY = 1000;
+   public long SPLASH_DELAY = 3000;
 
     public static MainActivity getInstance() {
         return mainActivity;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 loadFragmentUI("PaymentInsert");
-                loadDisconnected();
+//                loadDisconnected();
             }
         }, SPLASH_DELAY);
     }
@@ -60,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
                 transaction.replace(R.id.frameLoader, disconnectedFragment);
                 transaction.commit();
                 break;
+            case "SplitPayment":
+                Fragment splitPaymentFragment = new SplitPaymentFragment();
+                transaction.replace(R.id.frameLoader, splitPaymentFragment);
+                transaction.commit();
+                break;
+
         }
 
     }
