@@ -44,9 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layAmountInfo"
-            android:background="@color/colorAmountInfoBackGround"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,8 +65,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Labor Charge"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -82,8 +81,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$218.00"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -105,8 +104,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Fuel Charge"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -121,8 +120,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$45.78"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -144,8 +143,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Travel Time Charge"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -160,8 +159,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$109.00"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -183,8 +182,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Total Charges"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp"
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -200,8 +199,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$372.78"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp"
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -232,7 +231,7 @@
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Payment"
                         android:textColor="@color/colorMainTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -248,7 +247,7 @@
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$100.00"
                         android:textColor="@color/colorMainTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -270,8 +269,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Discount"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -286,8 +285,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$0.00"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -309,8 +308,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Balance Due"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp"
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -326,8 +325,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$272.78"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp"
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -352,8 +351,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="To Bill to CC"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -370,8 +369,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$100.00"
-                        android:textColor="@color/colorTxt"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textColor="#303030"
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

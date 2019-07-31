@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 loadFragmentUI("PaymentInsert");
-//                loadDisconnected();
+                loadDisconnected();
             }
         }, SPLASH_DELAY);
     }
