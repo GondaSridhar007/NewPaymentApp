@@ -1,7 +1,6 @@
 package com.testing.newapp.fragmentUI;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,15 +10,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
 
 public class SplitPaymentFragment extends Fragment {
     LinearLayout laySplitViewDetails, laySplitAmountInfoDropDown, laySplitInputCard, laySplitPayOptions, laySplitPaymentProcessing;
     boolean isLayAmountInfoDropDownVisibility = false;
-    ImageView imaArrow1, imaArrow2;
+    ImageView imaArrow1, imaArrow2, imgPayCard1;
     Button butSplitPay, butSplitChange;
+    double calculateAmount = 0.0;
+    TextView txtAmount;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,17 +41,28 @@ public class SplitPaymentFragment extends Fragment {
         butSplitChange = view.findViewById(R.id.butSplitChange);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
         imaArrow2 = view.findViewById(R.id.imaArrow2);
-
+        imgPayCard1 = view.findViewById(R.id.imgPayCard1);
+        txtAmount = view.findViewById(R.id.txtAmount);
         laySplitAmountInfoDropDown.setVisibility(View.GONE);
-        laySplitPayOptions.setVisibility(View.GONE);
-        laySplitPaymentProcessing.setVisibility(View.VISIBLE);
-        new Handler().postDelayed(new Runnable() {
+
+
+        laySplitPayOptions.setVisibility(View.VISIBLE);
+        laySplitPaymentProcessing.setVisibility(View.GONE);
+        try {
+            Bundle bundle = this.getArguments();
+            calculateAmount = bundle.getDouble("calculateAmount", 0.0);
+            txtAmount.setText("" + calculateAmount);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        imgPayCard1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                laySplitPayOptions.setVisibility(View.VISIBLE);
-                laySplitPaymentProcessing.setVisibility(View.GONE);
+            public void onClick(View v) {
+                laySplitPayOptions.setVisibility(View.GONE);
+                laySplitPaymentProcessing.setVisibility(View.VISIBLE);
             }
-        }, MainActivity.getInstance().SPLASH_DELAY);
+        });
 
         laySplitViewDetails.setOnClickListener(new View.OnClickListener() {
             @Override

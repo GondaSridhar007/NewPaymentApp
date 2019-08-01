@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -25,7 +26,6 @@ import com.testing.newapp.fragmentUI.SplitPaymentFragment;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.ksoap2.serialization.SoapObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
         mainActivity = this;
         spinnerDropDown = findViewById(R.id.spinnerDropDown);
         GetCustomerForPaymentNew();
-        loadFragmentUI("PaymentCharging");
+        loadFragmentUI("PaymentCharging", null);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                loadFragmentUI("PaymentInsert");
+                loadFragmentUI("PaymentInsert", null);
 //                loadDisconnected();
             }
         }, SPLASH_DELAY);
@@ -66,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                loadFragmentUI("Disconnected");
+                loadFragmentUI("Disconnected", null);
             }
         }, SPLASH_DELAY);
     }
 
-    public void loadFragmentUI(String type) {
+    public void loadFragmentUI(String type, Bundle bundle) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         switch (type) {
             case "PaymentCharging":
@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 spinnerDropDown.setEnabled(true);
                 spinnerDropDown.setClickable(true);
                 Fragment splitPaymentFragment = new SplitPaymentFragment();
+                splitPaymentFragment.setArguments(bundle);
                 transaction.replace(R.id.frameLoader, splitPaymentFragment);
                 transaction.commit();
                 break;
@@ -132,15 +133,37 @@ public class MainActivity extends AppCompatActivity {
                             String jsonStr = getJson(strResp);
                             JSONObject jsonObject = new JSONObject(jsonStr);
                             JSONArray customers = (JSONArray) jsonObject.get("Table");
-                            CustomerDataModel dataModel;
-                            ArrayList<CustomerDataModel> listData = new ArrayList<>();
+                            CustomerDataModel customerDataModel = new CustomerDataModel();
+                            customerDataModel.setFullName("0-Select Customer");
+                            customerDataModel.setCustomerId(0);
+                            final ArrayList<CustomerDataModel> listData = new ArrayList<>();
+                            listData.add(customerDataModel);
                             for (int i = 0; i < customers.length(); i++) {
-                                dataModel = new Gson().fromJson(customers.getJSONObject(i).toString(), new TypeToken<CustomerDataModel>() {
+                                CustomerDataModel dataModel = new Gson().fromJson(customers.getJSONObject(i).toString(), new TypeToken<CustomerDataModel>() {
                                 }.getType());
                                 listData.add(dataModel);
                             }
                             SpinnerAdapter spinnerAdapter = new SpinnerAdapter(MainActivity.this, listData);
                             spinnerDropDown.setAdapter(spinnerAdapter);
+                            spinnerDropDown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    if (position != 0) {
+                                        CustomerDataModel dataModel = listData.get(position);
+                                        long dailysheetid = dataModel.getDailysheetid();
+                                        long CustomerId = dataModel.getCustomerId();
+                                        Toast.makeText(MainActivity.this, "dailysheetid :- " + dailysheetid + " CustomerId :-" + CustomerId, Toast.LENGTH_LONG).show();
+
+                                    }
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+
                             /*JSONObject customersRow = customers.getJSONObject(0);
                             String CustomerId = customersRow.getString("CustomerId");
                             String dailysheetid = customersRow.getString("dailysheetid");

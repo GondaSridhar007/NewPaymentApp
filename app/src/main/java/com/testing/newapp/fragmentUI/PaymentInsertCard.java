@@ -1,7 +1,6 @@
 package com.testing.newapp.fragmentUI;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,7 +17,7 @@ import com.testing.newapp.R;
 public class PaymentInsertCard extends Fragment {
     LinearLayout layViewDetails, layAmountInfoDropDown, layInputCard, layPayOptions, layPaymentProcessing;
     boolean isLayAmountInfoDropDownVisibility = false;
-    ImageView imaArrow1, imaArrow2;
+    ImageView imaArrow1, imaArrow2, imgPayCard1;
     Button butPay, butPaySlitPay;
 
     @Override
@@ -40,17 +39,19 @@ public class PaymentInsertCard extends Fragment {
         layPaymentProcessing = view.findViewById(R.id.layPaymentProcessing);
         butPay = view.findViewById(R.id.butPay);
         butPaySlitPay = view.findViewById(R.id.butPaySlitPay);
-
+        imgPayCard1 = view.findViewById(R.id.imgPayCard1);
         layAmountInfoDropDown.setVisibility(View.GONE);
-        layPayOptions.setVisibility(View.GONE);
-        layPaymentProcessing.setVisibility(View.VISIBLE);
-        new Handler().postDelayed(new Runnable() {
+
+        layPayOptions.setVisibility(View.VISIBLE);
+        layPaymentProcessing.setVisibility(View.GONE);
+        imgPayCard1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                layPayOptions.setVisibility(View.VISIBLE);
-                layPaymentProcessing.setVisibility(View.GONE);
+            public void onClick(View v) {
+                layPayOptions.setVisibility(View.GONE);
+                layPaymentProcessing.setVisibility(View.VISIBLE);
             }
-        }, MainActivity.getInstance().SPLASH_DELAY);
+        });
+
         layViewDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +77,7 @@ public class PaymentInsertCard extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
-                MainActivity.getInstance().loadFragmentUI("SplitAmountPayment");
+                MainActivity.getInstance().loadFragmentUI("SplitAmountPayment", null);
             }
         });
         butPay.setOnClickListener(new View.OnClickListener() {

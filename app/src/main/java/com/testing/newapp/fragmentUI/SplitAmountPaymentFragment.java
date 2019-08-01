@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
@@ -21,6 +22,8 @@ import com.testing.newapp.R;
 public class SplitAmountPaymentFragment extends Fragment {
     EditText etTextAmount;
     Button butPaySlitPay;
+    double totalAmount = 11770.00, calculateAmount = 0.0;
+    TextView txtTotalAmount;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +36,8 @@ public class SplitAmountPaymentFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         etTextAmount = view.findViewById(R.id.etTextAmount);
         butPaySlitPay = view.findViewById(R.id.butPaySlitPay);
+        txtTotalAmount = view.findViewById(R.id.txtTotalAmount);
+
         etTextAmount.addTextChangedListener(new TextWatcher() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             public void afterTextChanged(Editable charSequence) {
@@ -41,10 +46,14 @@ public class SplitAmountPaymentFragment extends Fragment {
                         butPaySlitPay.setBackground(getActivity().getResources().getDrawable(R.drawable.ic_confirm));
                         butPaySlitPay.setTextColor(Color.parseColor("#1C222E"));
                         etTextAmount.setBackground(getActivity().getResources().getDrawable(R.drawable.edit_bg_amount));
+                        txtTotalAmount.setText("" + totalAmount);
                     } else {
                         butPaySlitPay.setBackground(getActivity().getResources().getDrawable(R.drawable.button_bg));
                         butPaySlitPay.setTextColor(Color.parseColor("#FFFFFF"));
                         etTextAmount.setBackground(getActivity().getResources().getDrawable(R.drawable.edit_bg_confirm_amount));
+                        double enterAmount = Double.parseDouble(etTextAmount.getText().toString());
+                        calculateAmount = totalAmount - enterAmount;
+                        txtTotalAmount.setText("" + calculateAmount);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -62,7 +71,9 @@ public class SplitAmountPaymentFragment extends Fragment {
             public void onClick(View v) {
                 String amount = etTextAmount.getText().toString();
                 if (amount.length() != 0) {
-                    MainActivity.getInstance().loadFragmentUI("SplitPayment");
+                    Bundle bundle = new Bundle();
+                    bundle.putDouble("calculateAmount", calculateAmount);
+                    MainActivity.getInstance().loadFragmentUI("SplitPayment",bundle);
                 }
             }
         });

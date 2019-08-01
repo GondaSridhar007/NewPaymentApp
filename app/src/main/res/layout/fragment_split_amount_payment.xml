@@ -83,6 +83,7 @@
                         android:background="@drawable/edit_bg_amount"
                         android:gravity="right|center"
                         android:hint="000.00"
+                        android:inputType="number"
                         android:padding="@dimen/_5sdp"
                         android:textSize="36dp" />
                 </LinearLayout>
@@ -98,6 +99,7 @@
                     android:textSize="24dp" />
 
                 <TextView
+                    android:id="@+id/txtTotalAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_2sdp"

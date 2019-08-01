@@ -43,7 +43,12 @@ public class SpinnerAdapter extends BaseAdapter {
         String[] items = dataList.get(position).getFullName().split("-");
         txtName.setText(items[1]);
         TextView txtId = view.findViewById(R.id.txtId);
-        txtId.setText("MOVE ID: " + dataList.get(position).getCustomerId());
+        if (dataList.get(position).getCustomerId() == 0) {
+            txtId.setVisibility(View.GONE);
+        } else {
+            txtId.setVisibility(View.VISIBLE);
+            txtId.setText("CUSTOMER ID: " + dataList.get(position).getCustomerId());
+        }
         return view;
     }
 }
