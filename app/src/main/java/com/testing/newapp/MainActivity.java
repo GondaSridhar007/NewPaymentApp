@@ -41,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mainActivity = this;
-        GetCustomerForPaymentNew();
-//        loadFragmentUI("PaymentCharging");
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                loadFragmentUI("PaymentInsert");
-////                loadDisconnected();
-//            }
-//        }, SPLASH_DELAY);
+//        GetCustomerForPaymentNew();
+        loadFragmentUI("PaymentCharging");
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadFragmentUI("PaymentInsert");
+//                loadDisconnected();
+            }
+        }, SPLASH_DELAY);
     }
 
     private void loadDisconnected() {
