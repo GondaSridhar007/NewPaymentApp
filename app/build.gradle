@@ -39,4 +39,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.googlecode.json-simple:json-simple:1.1'
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation files('libs\\ksoap2-android-assembly-2.5.5-jar-with-dependencies.jar')
 }

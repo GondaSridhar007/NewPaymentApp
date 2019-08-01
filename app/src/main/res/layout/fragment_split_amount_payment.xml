@@ -116,7 +116,7 @@
                     <Button
                         android:id="@+id/butPay"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_height="@dimen/_32sdp"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_weight="1"
@@ -125,12 +125,13 @@
                         android:textAllCaps="false"
                         android:textColor="#FF414141"
                         android:textSize="26dp"
-                        android:fontFamily="@font/roboto_bold"/>
+                        app:elevation="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular"/>
 
                     <Button
                         android:id="@+id/butPaySlitPay"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_height="@dimen/_32sdp"
                         android:layout_marginStart="@dimen/_5sdp"
                         android:layout_marginEnd="@dimen/_10sdp"
                         android:layout_weight="1"
@@ -139,7 +140,8 @@
                         android:textAllCaps="false"
                         android:textColor="#1C222E"
                         android:textSize="26dp"
-                        android:fontFamily="@font/roboto_bold" />
+                        android:fontFamily="@font/roboto_regular"
+                        app:elevation="@dimen/_5sdp"/>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

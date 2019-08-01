@@ -18,7 +18,7 @@ import com.testing.newapp.R;
 public class SplitPaymentFragment extends Fragment {
     LinearLayout laySplitViewDetails, laySplitAmountInfoDropDown, laySplitInputCard, laySplitPayOptions, laySplitPaymentProcessing;
     boolean isLayAmountInfoDropDownVisibility = false;
-    ImageView imaArrow1, imaArrow2, imgPayCard1, imgPayCard2;
+    ImageView imaArrow1, imaArrow2;
     Button butSplitPay, butSplitChange;
 
     @Override
@@ -40,12 +40,8 @@ public class SplitPaymentFragment extends Fragment {
         butSplitChange = view.findViewById(R.id.butSplitChange);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
         imaArrow2 = view.findViewById(R.id.imaArrow2);
-        imgPayCard1 = view.findViewById(R.id.imgPayCard1);
-        imgPayCard2 = view.findViewById(R.id.imgPayCard2);
 
         laySplitAmountInfoDropDown.setVisibility(View.GONE);
-        imgPayCard1.setVisibility(View.VISIBLE);
-        imgPayCard2.setVisibility(View.GONE);
         laySplitPayOptions.setVisibility(View.GONE);
         laySplitPaymentProcessing.setVisibility(View.VISIBLE);
         new Handler().postDelayed(new Runnable() {
@@ -64,15 +60,11 @@ public class SplitPaymentFragment extends Fragment {
                     isLayAmountInfoDropDownVisibility = true;
                     imaArrow1.setRotation(90);
                     imaArrow2.setRotation(90);
-                    imgPayCard1.setVisibility(View.GONE);
-                    imgPayCard2.setVisibility(View.VISIBLE);
                 } else {
                     laySplitAmountInfoDropDown.setVisibility(View.GONE);
                     isLayAmountInfoDropDownVisibility = false;
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
-                    imgPayCard1.setVisibility(View.VISIBLE);
-                    imgPayCard2.setVisibility(View.GONE);
                 }
             }
         });
@@ -84,8 +76,6 @@ public class SplitPaymentFragment extends Fragment {
                     isLayAmountInfoDropDownVisibility = false;
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
-                    imgPayCard1.setVisibility(View.VISIBLE);
-                    imgPayCard2.setVisibility(View.GONE);
                 }
             }
         });
@@ -97,8 +87,6 @@ public class SplitPaymentFragment extends Fragment {
                     isLayAmountInfoDropDownVisibility = false;
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
-                    imgPayCard1.setVisibility(View.VISIBLE);
-                    imgPayCard2.setVisibility(View.GONE);
                 }
             }
         });

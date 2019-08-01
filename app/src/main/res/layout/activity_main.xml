@@ -13,8 +13,9 @@
         android:background="@drawable/drop_down_bg">
 
         <Spinner
+            android:id="@+id/spinnerDropDown"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_height="wrap_content"
             android:gravity="center" />
     </RelativeLayout>
 
