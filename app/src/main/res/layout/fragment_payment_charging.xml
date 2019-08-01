@@ -30,7 +30,7 @@
                 android:fontFamily="@font/roboto_bold"
                 android:text="Waiting on Charges..."
                 android:textColor="#000000"
-                android:textSize="@dimen/_15sdp" />
+                android:textSize="36dp" />
 
             <ProgressBar
                 android:layout_width="@dimen/_40sdp"
@@ -51,16 +51,16 @@
                 android:gravity="center"
                 android:text="Your Operations Manager is approving charges.The payment screen will appear soon."
                 android:textColor="#000000"
-                android:textSize="@dimen/_11sdp" />
+                android:textSize="24dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_20sdp"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto_regularitalic"
                 android:text="To cancel, close this window or tap the Back button."
                 android:textColor="#7C7C7C"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="21" />
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
