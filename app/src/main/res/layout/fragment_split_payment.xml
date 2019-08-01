@@ -24,7 +24,7 @@
                 android:fontFamily="@font/roboto_bold"
                 android:text="Payment Amount (Split):"
                 android:textColor="#2F2F2F"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="36dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
                 android:fontFamily="@font/roboto_bold"
                 android:text="$500.00"
                 android:textColor="#2F2F2F"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="36dp" />
         </RelativeLayout>
 
         <LinearLayout
@@ -64,10 +64,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="Labor Charge"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -81,10 +81,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="$218.00"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -105,10 +105,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="Fuel Charge"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -122,10 +122,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="$45.78"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -146,10 +146,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="Travel Time Charge"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -163,10 +163,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="$109.00"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -187,10 +187,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_bold"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="Total Charges"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -204,10 +204,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_bold"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="$372.78"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -235,10 +235,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_bold"
                         android:text="Payment"
                         android:textColor="@color/colorMainTxt"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -252,10 +252,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_bold"
                         android:text="$100.00"
                         android:textColor="@color/colorMainTxt"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -276,10 +276,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="Discount"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -293,10 +293,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="$0.00"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -320,7 +320,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:text="Balance Due"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -337,7 +337,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:text="$272.78"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -361,10 +361,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="To Bill to CC"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -381,10 +381,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="$100.00"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -413,7 +413,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="View Details"
                 android:textColor="#2F2F2F"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="24dp" />
 
             <ImageView
                 android:id="@+id/imaArrow2"
@@ -565,7 +565,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_2ssp"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="@dimen/_40sdp"
@@ -576,19 +577,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_regular"
             android:text="Processing..."
             android:textColor="#2F2F2F"
-            android:textSize="@dimen/_15sdp" />
+            android:textSize="36dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2ssp"
+            android:layout_marginTop="@dimen/_2ssp"
+            android:layout_marginEnd="@dimen/_2ssp"
             android:layout_marginBottom="@dimen/_20sdp"
             android:fontFamily="@font/roboto_medium"
             android:text="Keep card inserted and stay on this page until completed."
             android:textColor="#7C7C7C"
-            android:textSize="@dimen/_10sdp" />
+            android:textSize="24dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
