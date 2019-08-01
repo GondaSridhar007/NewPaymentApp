@@ -30,15 +30,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_bold"
                 android:text="Card Reader Disconnected"
                 android:textColor="#F70303"
-                android:textSize="@dimen/_13sdp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_13sdp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_medium"
                 android:text="Follow these steps to reconnect the Card Reader"
                 android:textColor="@color/NormalTextColor"
                 android:textSize="@dimen/_12sdp" />
@@ -92,10 +93,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
                             android:text="Get Support"
                             android:textColor="@color/colorBlack"
-                            android:textSize="@dimen/_10sdp"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/_10sdp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -117,10 +118,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
                             android:text="Open Setting"
                             android:textColor="@color/colorBlack"
-                            android:textSize="@dimen/_10sdp"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/_10sdp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>

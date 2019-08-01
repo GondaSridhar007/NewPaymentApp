@@ -27,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_bold"
                 android:text="Waiting on Charges..."
                 android:textColor="#000000"
                 android:textSize="@dimen/_15sdp" />
@@ -46,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/roboto_medium"
                 android:gravity="center"
                 android:text="Your Operations Manager is approving charges.The payment screen will appear soon."
                 android:textColor="#000000"
@@ -55,6 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/roboto_regular"
                 android:text="To cancel, close this window or tap the Back button."
                 android:textColor="#7C7C7C"
                 android:textSize="@dimen/_10sdp" />
