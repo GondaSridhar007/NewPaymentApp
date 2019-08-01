@@ -60,7 +60,7 @@
                 android:fontFamily="@font/roboto_regularitalic"
                 android:text="To cancel, close this window or tap the Back button."
                 android:textColor="#7C7C7C"
-                android:textSize="21" />
+                android:textSize="21dp" />
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
