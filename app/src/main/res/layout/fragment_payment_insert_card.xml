@@ -584,11 +584,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="@dimen/_2ssp"
             android:layout_marginTop="@dimen/_2ssp"
             android:layout_marginEnd="@dimen/_2ssp"
             android:layout_marginBottom="@dimen/_20sdp"
             android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
             android:text="Keep card inserted and stay on this page until completed."
             android:textColor="#7C7C7C"
             android:textSize="24dp" />
