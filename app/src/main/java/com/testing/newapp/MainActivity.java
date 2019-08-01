@@ -19,6 +19,7 @@ import com.testing.newapp.dataModel.CustomerDataModel;
 import com.testing.newapp.fragmentUI.PaymentChargingFragment;
 import com.testing.newapp.fragmentUI.PaymentDisconnected;
 import com.testing.newapp.fragmentUI.PaymentInsertCard;
+import com.testing.newapp.fragmentUI.SplitAmountPaymentFragment;
 import com.testing.newapp.fragmentUI.SplitPaymentFragment;
 
 import org.json.JSONArray;
@@ -80,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 transaction.commit();
                 break;
             case "PaymentInsert":
+                spinnerDropDown.setEnabled(true);
+                spinnerDropDown.setClickable(true);
                 spinnerDropDown.setVisibility(View.VISIBLE);
                 Fragment paymentInsertFragment = new PaymentInsertCard();
                 transaction.replace(R.id.frameLoader, paymentInsertFragment);
@@ -93,10 +96,17 @@ public class MainActivity extends AppCompatActivity {
                 transaction.commit();
                 break;
             case "SplitPayment":
-                spinnerDropDown.setEnabled(false);
-                spinnerDropDown.setClickable(false);
+                spinnerDropDown.setEnabled(true);
+                spinnerDropDown.setClickable(true);
                 Fragment splitPaymentFragment = new SplitPaymentFragment();
                 transaction.replace(R.id.frameLoader, splitPaymentFragment);
+                transaction.commit();
+                break;
+            case "SplitAmountPayment":
+                spinnerDropDown.setEnabled(true);
+                spinnerDropDown.setClickable(true);
+                Fragment splitAmountPaymentFragment = new SplitAmountPaymentFragment();
+                transaction.replace(R.id.frameLoader, splitAmountPaymentFragment);
                 transaction.commit();
                 break;
         }

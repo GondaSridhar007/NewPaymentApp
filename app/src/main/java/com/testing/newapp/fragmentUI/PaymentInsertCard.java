@@ -76,7 +76,7 @@ public class PaymentInsertCard extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
-                MainActivity.getInstance().loadFragmentUI("SplitPayment");
+                MainActivity.getInstance().loadFragmentUI("SplitAmountPayment");
             }
         });
         butPay.setOnClickListener(new View.OnClickListener() {
