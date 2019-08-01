@@ -37,27 +37,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_2sdp"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Total Amount"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textColor="#FF2F2F2F"
+                    android:textSize="24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_2sdp"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="$1,1770.00"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"
-                    android:textStyle="bold" />
+                    android:textColor="#FF2F2F2F"
+                    android:textSize="36dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Your Payment"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"
-                    android:textStyle="bold" />
+                    android:textColor="#FF2F2F2F"
+                    android:textSize="36dp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -70,10 +71,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="$"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/_15sdp"
-                        android:textStyle="bold" />
+                        android:textColor="#FF2F2F2F"
+                        android:textSize="36dp" />
 
                     <EditText
                         android:layout_width="@dimen/_140sdp"
@@ -82,7 +83,7 @@
                         android:gravity="right|center"
                         android:hint="000.00"
                         android:padding="@dimen/_5sdp"
-                        android:textSize="@dimen/_15sdp" />
+                        android:textSize="36dp" />
                 </LinearLayout>
 
                 <TextView
@@ -90,18 +91,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Total Amount"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textColor="#FF2F2F2F"
+                    android:textSize="24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_2sdp"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="$1,1770.00"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"
-                    android:textStyle="bold" />
+                    android:textColor="#FF2F2F2F"
+                    android:textSize="36dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -119,11 +121,11 @@
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:background="@drawable/ic_button_disconnected"
-                        android:text="Pay Cash"
+                        android:text="Cancel"
                         android:textAllCaps="false"
-                        android:textColor="#1E2332"
-                        android:textSize="@dimen/_12sdp"
-                        android:textStyle="bold" />
+                        android:textColor="#FF414141"
+                        android:textSize="26dp"
+                        android:fontFamily="@font/roboto_bold"/>
 
                     <Button
                         android:id="@+id/butPaySlitPay"
@@ -136,8 +138,8 @@
                         android:text="Confirm"
                         android:textAllCaps="false"
                         android:textColor="#1C222E"
-                        android:textSize="@dimen/_12sdp"
-                        android:textStyle="bold" />
+                        android:textSize="26dp"
+                        android:fontFamily="@font/roboto_bold" />
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
