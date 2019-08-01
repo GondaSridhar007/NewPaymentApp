@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_20sdp"
-                android:fontFamily="@font/roboto_medium"
+                android:fontFamily="@font/roboto_regular"
                 android:gravity="center"
                 android:text="Your Operations Manager is approving charges.The payment screen will appear soon."
                 android:textColor="#000000"

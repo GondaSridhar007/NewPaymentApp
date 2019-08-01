@@ -32,8 +32,8 @@
                 android:layout_margin="@dimen/_5sdp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Card Reader Disconnected"
-                android:textColor="#F70303"
-                android:textSize="@dimen/_13sdp" />
+                android:textColor="#2F2F2F"
+                android:textSize="36dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="Follow these steps to reconnect the Card Reader"
                 android:textColor="@color/NormalTextColor"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="24dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="Get Support"
                             android:textColor="@color/colorBlack"
-                            android:textSize="@dimen/_10sdp" />
+                            android:textSize="24dp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -121,7 +121,7 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="Open Setting"
                             android:textColor="@color/colorBlack"
-                            android:textSize="@dimen/_10sdp" />
+                            android:textSize="24dp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>

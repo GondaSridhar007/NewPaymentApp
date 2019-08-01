@@ -25,7 +25,7 @@
                 android:layout_margin="@dimen/_8sdp"
                 android:text="Amount Due : "
                 android:textColor="#2F2F2F"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="36dp" />
 
             <TextView
                 android:fontFamily="@font/roboto_bold"
@@ -36,7 +36,7 @@
                 android:layout_margin="@dimen/_8sdp"
                 android:text="$272.78"
                 android:textColor="#2F2F2F"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="36dp" />
         </RelativeLayout>
 
         <LinearLayout
@@ -62,13 +62,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Labor Charge"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -79,13 +79,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$218.00"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -103,13 +103,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Fuel Charge"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -120,13 +120,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$45.78"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -144,13 +144,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Travel Time Charge"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -161,13 +161,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$109.00"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -185,13 +185,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Total Charges"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -202,13 +202,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$372.78"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -233,13 +233,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Payment"
                         android:textColor="@color/colorMainTxt"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -250,13 +250,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$100.00"
                         android:textColor="@color/colorMainTxt"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -274,13 +274,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Discount"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -291,13 +291,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$0.00"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -315,13 +315,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="Balance Due"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -338,7 +338,7 @@
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$272.78"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -359,13 +359,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="To Bill to CC"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -379,13 +379,13 @@
                     android:background="@drawable/amount_info_bg">
 
                     <TextView
-                        android:fontFamily="@font/roboto_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:text="$100.00"
                         android:textColor="#303030"
-                        android:textSize="@dimen/_9sdp" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -393,7 +393,7 @@
         <LinearLayout
             android:id="@+id/layViewDetails"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_height="52dp"
             android:layout_below="@+id/layAmountInfoDropDown"
             android:background="@drawable/view_details_bg"
             android:gravity="center"
@@ -414,7 +414,7 @@
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:text="View Details"
                 android:textColor="#2F2F2F"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="24dp" />
 
             <ImageView
                 android:id="@+id/imaArrow2"
@@ -440,12 +440,12 @@
             android:orientation="horizontal">
 
             <TextView
-                android:fontFamily="@font/roboto_medium"
+                android:fontFamily="@font/roboto_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Card Reader is Ready"
                 android:textColor="@color/colorMainTxt"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="20dp" />
 
             <ImageView
                 android:layout_width="@dimen/_10sdp"
@@ -456,13 +456,13 @@
         </LinearLayout>
 
         <TextView
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
             android:text="Please insert card"
             android:textColor="#2F2F2F"
-            android:textSize="@dimen/_15sdp" />
+            android:textSize="36dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -522,7 +522,7 @@
             android:layout_margin="@dimen/_5sdp"
             android:text="Additional Payment Options"
             android:textColor="#7C7C7C"
-            android:textSize="@dimen/_10sdp" />
+            android:textSize="24dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -541,7 +541,7 @@
                 android:text="Pay Cash"
                 android:textAllCaps="false"
                 android:textColor="#FDFDFD"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="26dp" />
 
             <Button
                 android:id="@+id/butPaySlitPay"
@@ -554,7 +554,7 @@
                 android:text="Split Payment"
                 android:textAllCaps="false"
                 android:textColor="#FDFDFD"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="26dp" />
         </LinearLayout>
     </LinearLayout>
 
