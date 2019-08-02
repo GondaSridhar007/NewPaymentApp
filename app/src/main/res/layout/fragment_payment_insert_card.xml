@@ -48,8 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/layAmountInfo"
                 android:background="@color/colorWhite"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -597,6 +596,7 @@
                 android:background="#A9DCC9">
 
                 <ImageView
+                    android:id="@+id/imPaymentProcessing"
                     android:layout_width="@dimen/_150sdp"
                     android:layout_height="@dimen/_150sdp"
                     android:src="@drawable/ic_payment" />

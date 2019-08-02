@@ -20,6 +20,7 @@ import com.testing.newapp.dataModel.CustomerDataModel;
 import com.testing.newapp.fragmentUI.PaymentChargingFragment;
 import com.testing.newapp.fragmentUI.PaymentDisconnected;
 import com.testing.newapp.fragmentUI.PaymentInsertCard;
+import com.testing.newapp.fragmentUI.PaymentSignatureFragment;
 import com.testing.newapp.fragmentUI.SplitAmountPaymentFragment;
 import com.testing.newapp.fragmentUI.SplitPaymentFragment;
 
@@ -108,6 +109,13 @@ public class MainActivity extends AppCompatActivity {
                 spinnerDropDown.setClickable(true);
                 Fragment splitAmountPaymentFragment = new SplitAmountPaymentFragment();
                 transaction.replace(R.id.frameLoader, splitAmountPaymentFragment);
+                transaction.commit();
+                break;
+            case "PaymentSignature":
+                spinnerDropDown.setEnabled(false);
+                spinnerDropDown.setClickable(false);
+                Fragment paymentSignatureFragment = new PaymentSignatureFragment();
+                transaction.replace(R.id.frameLoader, paymentSignatureFragment);
                 transaction.commit();
                 break;
         }
