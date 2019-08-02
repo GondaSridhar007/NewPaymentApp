@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
             case "PaymentCharging":
                 spinnerDropDown.setVisibility(View.GONE);
                 Fragment paymentChargingFragment = new PaymentChargingFragment();
-                transaction.replace(R.id.frameLoader, paymentChargingFragment);
-                transaction.commit();
+                transaction.add(R.id.frameLoader, paymentChargingFragment);
+                transaction.commitAllowingStateLoss();
                 break;
             case "PaymentInsert":
                 spinnerDropDown.setEnabled(true);
@@ -87,14 +87,14 @@ public class MainActivity extends AppCompatActivity {
                 spinnerDropDown.setVisibility(View.VISIBLE);
                 Fragment paymentInsertFragment = new PaymentInsertCard();
                 transaction.replace(R.id.frameLoader, paymentInsertFragment);
-                transaction.commit();
+                transaction.commitAllowingStateLoss();
                 break;
             case "Disconnected":
                 spinnerDropDown.setEnabled(false);
                 spinnerDropDown.setClickable(false);
                 Fragment disconnectedFragment = new PaymentDisconnected();
                 transaction.replace(R.id.frameLoader, disconnectedFragment);
-                transaction.commit();
+                transaction.commitAllowingStateLoss();
                 break;
             case "SplitPayment":
                 spinnerDropDown.setEnabled(true);
@@ -102,21 +102,21 @@ public class MainActivity extends AppCompatActivity {
                 Fragment splitPaymentFragment = new SplitPaymentFragment();
                 splitPaymentFragment.setArguments(bundle);
                 transaction.replace(R.id.frameLoader, splitPaymentFragment);
-                transaction.commit();
+                transaction.commitAllowingStateLoss();
                 break;
             case "SplitAmountPayment":
                 spinnerDropDown.setEnabled(true);
                 spinnerDropDown.setClickable(true);
                 Fragment splitAmountPaymentFragment = new SplitAmountPaymentFragment();
                 transaction.replace(R.id.frameLoader, splitAmountPaymentFragment);
-                transaction.commit();
+                transaction.commitAllowingStateLoss();
                 break;
             case "PaymentSignature":
                 spinnerDropDown.setEnabled(false);
                 spinnerDropDown.setClickable(false);
                 Fragment paymentSignatureFragment = new PaymentSignatureFragment();
                 transaction.replace(R.id.frameLoader, paymentSignatureFragment);
-                transaction.commit();
+                transaction.commitAllowingStateLoss();
                 break;
         }
     }

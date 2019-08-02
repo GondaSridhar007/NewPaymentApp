@@ -117,7 +117,7 @@
                     android:weightSum="2">
 
                     <Button
-                        android:id="@+id/butPay"
+                        android:id="@+id/butCancel"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_32sdp"
                         android:layout_marginStart="@dimen/_10sdp"

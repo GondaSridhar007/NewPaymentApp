@@ -400,8 +400,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_2ssp"
             android:gravity="center"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -533,13 +532,15 @@
                 android:textSize="36dp" />
 
             <LinearLayout
+                android:id="@+id/laySignature"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_80sdp"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
-                android:background="@drawable/signature_bg_lay" />
+                android:background="@drawable/signature_bg_lay"
+                android:orientation="horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -582,7 +583,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_2ssp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="wrap_content"

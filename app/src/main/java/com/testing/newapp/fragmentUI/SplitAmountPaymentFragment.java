@@ -21,7 +21,7 @@ import com.testing.newapp.R;
 
 public class SplitAmountPaymentFragment extends Fragment {
     EditText etTextAmount;
-    Button butPaySlitPay;
+    Button butPaySlitPay, butCancel;
     double totalAmount = 11770.00, calculateAmount = 0.0;
     TextView txtTotalAmount;
 
@@ -36,6 +36,7 @@ public class SplitAmountPaymentFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         etTextAmount = view.findViewById(R.id.etTextAmount);
         butPaySlitPay = view.findViewById(R.id.butPaySlitPay);
+        butCancel = view.findViewById(R.id.butCancel);
         txtTotalAmount = view.findViewById(R.id.txtTotalAmount);
 
         etTextAmount.addTextChangedListener(new TextWatcher() {
@@ -73,8 +74,14 @@ public class SplitAmountPaymentFragment extends Fragment {
                 if (amount.length() != 0) {
                     Bundle bundle = new Bundle();
                     bundle.putDouble("calculateAmount", calculateAmount);
-                    MainActivity.getInstance().loadFragmentUI("SplitPayment",bundle);
+                    MainActivity.getInstance().loadFragmentUI("SplitPayment", bundle);
                 }
+            }
+        });
+        butCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.getInstance().loadFragmentUI("PaymentInsert", null);
             }
         });
     }
