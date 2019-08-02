@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarPayment"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorMainTxt"
+        android:elevation="@dimen/_5sdp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="PAYMENTS"
+                android:textColor="#FFFFFFFF"
+                android:textSize="28dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
     <RelativeLayout
         android:id="@+id/layDropDown"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarPayment"
         android:layout_margin="@dimen/_5sdp"
         android:background="@drawable/drop_down_bg">
 
@@ -16,8 +42,8 @@
             android:id="@+id/spinnerDropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:alpha="12"/>
+            android:alpha="12"
+            android:gravity="center" />
     </RelativeLayout>
 
     <FrameLayout

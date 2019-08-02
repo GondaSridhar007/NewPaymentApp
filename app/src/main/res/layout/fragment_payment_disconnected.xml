@@ -121,7 +121,8 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="Open Setting"
                             android:textColor="@color/colorBlack"
-                            android:textSize="24dp" />
+                            android:textSize="24dp"
+                            />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>

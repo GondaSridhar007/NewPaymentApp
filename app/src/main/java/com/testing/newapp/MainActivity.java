@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -49,9 +50,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         mainActivity = this;
         spinnerDropDown = findViewById(R.id.spinnerDropDown);
+        Toolbar mTopToolbar = findViewById(R.id.toolbarPayment);
+        setSupportActionBar(mTopToolbar);
         GetCustomerForPaymentNew();
         loadFragmentUI("PaymentCharging", null);
         new Handler().postDelayed(new Runnable() {
@@ -105,8 +109,8 @@ public class MainActivity extends AppCompatActivity {
                 transaction.commitAllowingStateLoss();
                 break;
             case "SplitAmountPayment":
-                spinnerDropDown.setEnabled(true);
-                spinnerDropDown.setClickable(true);
+                spinnerDropDown.setEnabled(false);
+                spinnerDropDown.setClickable(false);
                 Fragment splitAmountPaymentFragment = new SplitAmountPaymentFragment();
                 transaction.replace(R.id.frameLoader, splitAmountPaymentFragment);
                 transaction.commitAllowingStateLoss();

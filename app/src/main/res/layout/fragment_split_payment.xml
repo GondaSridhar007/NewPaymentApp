@@ -49,8 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/laySplitAmountInfo"
                 android:background="@color/colorWhite"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -61,7 +60,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="1.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -78,7 +77,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -102,7 +101,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="1.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -119,7 +118,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -143,7 +142,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="1.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -160,7 +159,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -184,7 +183,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="1.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -201,7 +200,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -219,8 +218,8 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:layout_marginTop="@dimen/_1ssp"
-                    android:layout_marginBottom="@dimen/_1ssp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
                     android:background="@color/colorViewBackGround" />
 
                 <LinearLayout
@@ -232,7 +231,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="1.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -249,7 +248,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -273,7 +272,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="1.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -290,7 +289,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -314,7 +313,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="1.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -331,7 +330,7 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_1ssp"
+                        android:layout_margin="0.5dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -355,10 +354,10 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_1ssp"
-                        android:layout_marginTop="@dimen/_1ssp"
-                        android:layout_marginEnd="@dimen/_1sdp"
-                        android:layout_marginBottom="@dimen/_1ssp"
+                        android:layout_marginStart="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginEnd="0.5dp"
+                        android:layout_marginBottom="0.5dp"
                         android:layout_weight="1.5"
                         android:background="@drawable/amount_info_bg">
 
@@ -375,10 +374,10 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_1ssp"
-                        android:layout_marginTop="@dimen/_1ssp"
-                        android:layout_marginEnd="@dimen/_1sdp"
-                        android:layout_marginBottom="@dimen/_1ssp"
+                        android:layout_marginStart="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginEnd="0.5dp"
+                        android:layout_marginBottom="0.5dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/amount_info_bg">
 
