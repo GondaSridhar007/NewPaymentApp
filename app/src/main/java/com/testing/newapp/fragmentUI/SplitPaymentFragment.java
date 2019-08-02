@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
 
 public class SplitPaymentFragment extends Fragment {
@@ -89,6 +90,7 @@ public class SplitPaymentFragment extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
+                MainActivity.getInstance().loadFragmentUI("SplitAmountPayment", null);
             }
         });
         butSplitPay.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +102,7 @@ public class SplitPaymentFragment extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
+
             }
         });
     }

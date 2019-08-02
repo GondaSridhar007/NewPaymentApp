@@ -13,7 +13,6 @@
             android:id="@+id/layAmountInfoDropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/layAmountInfo"
             android:background="@color/colorWhite"
             android:orientation="vertical"
             android:visibility="gone">
@@ -398,7 +397,6 @@
             android:id="@+id/layPaymentSignature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2ssp"
             android:gravity="center"
             android:orientation="vertical">
 

@@ -124,11 +124,20 @@ public class PaymentSignatureFragment extends Fragment {
             }
             Canvas canvas = new Canvas(bitmap);
             try {
-                FileOutputStream mFileOutStream = new FileOutputStream(StoredPath);
+                final FileOutputStream mFileOutStream = new FileOutputStream(StoredPath);
                 v.draw(canvas);
-                bitmap.compress(Bitmap.CompressFormat.PNG, 90, mFileOutStream);
-                mFileOutStream.flush();
-                mFileOutStream.close();
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            bitmap.compress(Bitmap.CompressFormat.PNG, 90, mFileOutStream);
+                            mFileOutStream.flush();
+                            mFileOutStream.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
 
             } catch (Exception e) {
                 Log.v("log_tag", e.toString());

@@ -22,7 +22,7 @@ import com.testing.newapp.R;
 public class SplitAmountPaymentFragment extends Fragment {
     EditText etTextAmount;
     Button butPaySlitPay, butCancel;
-    double totalAmount = 11770.00, calculateAmount = 0.0;
+    double totalAmount = 11770.00, calculateAmount = 11770.00;
     TextView txtTotalAmount;
 
     @Override
@@ -70,12 +70,9 @@ public class SplitAmountPaymentFragment extends Fragment {
         butPaySlitPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String amount = etTextAmount.getText().toString();
-                if (amount.length() != 0) {
-                    Bundle bundle = new Bundle();
-                    bundle.putDouble("calculateAmount", calculateAmount);
-                    MainActivity.getInstance().loadFragmentUI("SplitPayment", bundle);
-                }
+                Bundle bundle = new Bundle();
+                bundle.putDouble("calculateAmount", calculateAmount);
+                MainActivity.getInstance().loadFragmentUI("SplitPayment", bundle);
             }
         });
         butCancel.setOnClickListener(new View.OnClickListener() {
