@@ -18,6 +18,7 @@ import com.google.gson.reflect.TypeToken;
 import com.testing.newapp.api.ApiClient;
 import com.testing.newapp.api.ApiInterface;
 import com.testing.newapp.dataModel.CustomerDataModel;
+import com.testing.newapp.fragmentUI.cashPayment.CashPaymentApprovalFragment;
 import com.testing.newapp.fragmentUI.payment.PaymentChargingFragment;
 import com.testing.newapp.fragmentUI.payment.PaymentDisconnected;
 import com.testing.newapp.fragmentUI.payment.PaymentInsertCard;
@@ -128,6 +129,13 @@ public class MainActivity extends AppCompatActivity {
                 spinnerDropDown.setClickable(false);
                 Fragment splitPaymentSignatureFragment = new SplitPaymentSignatureFragment();
                 transaction.replace(R.id.frameLoader, splitPaymentSignatureFragment);
+                transaction.commitAllowingStateLoss();
+                break;
+            case "CashPaymentApproval":
+                spinnerDropDown.setEnabled(false);
+                spinnerDropDown.setClickable(false);
+                Fragment cashPaymentApprovalFragment = new CashPaymentApprovalFragment();
+                transaction.replace(R.id.frameLoader, cashPaymentApprovalFragment);
                 transaction.commitAllowingStateLoss();
                 break;
 

@@ -198,7 +198,8 @@
                     android:text="Pay Cash"
                     android:textAllCaps="false"
                     android:textColor="#FDFDFD"
-                    android:textSize="26dp" />
+                    android:textSize="26dp"
+                    android:fontFamily="@font/roboto_regular"/>
 
                 <Button
                     android:id="@+id/butSplitChange"
@@ -211,7 +212,8 @@
                     android:text="Change Split"
                     android:textAllCaps="false"
                     android:textColor="#FDFDFD"
-                    android:textSize="26dp" />
+                    android:textSize="26dp"
+                    android:fontFamily="@font/roboto_regular"/>
             </LinearLayout>
         </LinearLayout>
 

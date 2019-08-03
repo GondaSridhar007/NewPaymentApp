@@ -213,7 +213,8 @@
                     android:text="Clear Signature"
                     android:textAllCaps="false"
                     android:textColor="#FF414141"
-                    android:textSize="26dp" />
+                    android:textSize="26dp"
+                    android:fontFamily="@font/roboto_regular"/>
 
                 <Button
                     android:id="@+id/butSignatureSubmit"
@@ -226,7 +227,8 @@
                     android:text="Submit"
                     android:textAllCaps="false"
                     android:textColor="#FFFDFDFD"
-                    android:textSize="26dp" />
+                    android:textSize="26dp"
+                    android:fontFamily="@font/roboto_regular"/>
             </LinearLayout>
         </LinearLayout>
 
