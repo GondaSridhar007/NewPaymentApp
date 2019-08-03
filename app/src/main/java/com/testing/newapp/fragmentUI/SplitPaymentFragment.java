@@ -16,7 +16,7 @@ import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
 
 public class SplitPaymentFragment extends Fragment {
-    LinearLayout laySplitViewDetails, laySplitAmountInfoDropDown, laySplitInputCard, laySplitPayOptions, laySplitPaymentProcessing;
+    LinearLayout laySplitViewDetails, layAmountInfoDropDown, laySplitInputCard, laySplitPayOptions, laySplitPaymentProcessing;
     boolean isLayAmountInfoDropDownVisibility = false;
     ImageView imaArrow1, imaArrow2, imgPayCard1;
     Button butSplitPay, butSplitChange;
@@ -34,7 +34,7 @@ public class SplitPaymentFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         laySplitViewDetails = view.findViewById(R.id.laySplitViewDetails);
-        laySplitAmountInfoDropDown = view.findViewById(R.id.laySplitAmountInfoDropDown);
+        layAmountInfoDropDown = view.findViewById(R.id.layAmountInfoDropDown);
         laySplitInputCard = view.findViewById(R.id.laySplitInputCard);
         laySplitPayOptions = view.findViewById(R.id.laySplitPayOptions);
         laySplitPaymentProcessing = view.findViewById(R.id.laySplitPaymentProcessing);
@@ -44,7 +44,7 @@ public class SplitPaymentFragment extends Fragment {
         imaArrow2 = view.findViewById(R.id.imaArrow2);
         imgPayCard1 = view.findViewById(R.id.imgPayCard1);
         txtAmount = view.findViewById(R.id.txtAmount);
-        laySplitAmountInfoDropDown.setVisibility(View.GONE);
+        layAmountInfoDropDown.setVisibility(View.GONE);
 
 
         laySplitPayOptions.setVisibility(View.VISIBLE);
@@ -69,12 +69,12 @@ public class SplitPaymentFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (!isLayAmountInfoDropDownVisibility) {
-                    laySplitAmountInfoDropDown.setVisibility(View.VISIBLE);
+                    layAmountInfoDropDown.setVisibility(View.VISIBLE);
                     isLayAmountInfoDropDownVisibility = true;
                     imaArrow1.setRotation(90);
                     imaArrow2.setRotation(90);
                 } else {
-                    laySplitAmountInfoDropDown.setVisibility(View.GONE);
+                    layAmountInfoDropDown.setVisibility(View.GONE);
                     isLayAmountInfoDropDownVisibility = false;
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
@@ -85,7 +85,7 @@ public class SplitPaymentFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (isLayAmountInfoDropDownVisibility) {
-                    laySplitAmountInfoDropDown.setVisibility(View.GONE);
+                    layAmountInfoDropDown.setVisibility(View.GONE);
                     isLayAmountInfoDropDownVisibility = false;
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
@@ -97,7 +97,7 @@ public class SplitPaymentFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (isLayAmountInfoDropDownVisibility) {
-                    laySplitAmountInfoDropDown.setVisibility(View.GONE);
+                    layAmountInfoDropDown.setVisibility(View.GONE);
                     isLayAmountInfoDropDownVisibility = false;
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);

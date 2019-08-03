@@ -55,7 +55,7 @@ public class PaymentSignatureFragment extends Fragment {
         layPaymentComplete.setVisibility(View.GONE);
         layAmountInfoDropDown.setVisibility(View.GONE);
 
-        layViewDetails.setOnClickListener(new View.OnClickListener() {
+            layViewDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!isLayAmountInfoDropDownVisibility) {
