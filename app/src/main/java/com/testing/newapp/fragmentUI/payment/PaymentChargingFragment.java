@@ -1,4 +1,4 @@
-package com.testing.newapp.fragmentUI;
+package com.testing.newapp.fragmentUI.payment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

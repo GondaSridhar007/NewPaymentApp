@@ -18,12 +18,13 @@ import com.google.gson.reflect.TypeToken;
 import com.testing.newapp.api.ApiClient;
 import com.testing.newapp.api.ApiInterface;
 import com.testing.newapp.dataModel.CustomerDataModel;
-import com.testing.newapp.fragmentUI.PaymentChargingFragment;
-import com.testing.newapp.fragmentUI.PaymentDisconnected;
-import com.testing.newapp.fragmentUI.PaymentInsertCard;
-import com.testing.newapp.fragmentUI.PaymentSignatureFragment;
-import com.testing.newapp.fragmentUI.SplitAmountPaymentFragment;
-import com.testing.newapp.fragmentUI.SplitPaymentFragment;
+import com.testing.newapp.fragmentUI.payment.PaymentChargingFragment;
+import com.testing.newapp.fragmentUI.payment.PaymentDisconnected;
+import com.testing.newapp.fragmentUI.payment.PaymentInsertCard;
+import com.testing.newapp.fragmentUI.payment.PaymentSignatureFragment;
+import com.testing.newapp.fragmentUI.splitPayment.SplitAmountPaymentFragment;
+import com.testing.newapp.fragmentUI.splitPayment.SplitPaymentFragment;
+import com.testing.newapp.fragmentUI.splitPayment.SplitPaymentSignatureFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -122,6 +123,14 @@ public class MainActivity extends AppCompatActivity {
                 transaction.replace(R.id.frameLoader, paymentSignatureFragment);
                 transaction.commitAllowingStateLoss();
                 break;
+            case "SplitPaymentSignature":
+                spinnerDropDown.setEnabled(false);
+                spinnerDropDown.setClickable(false);
+                Fragment splitPaymentSignatureFragment = new SplitPaymentSignatureFragment();
+                transaction.replace(R.id.frameLoader, splitPaymentSignatureFragment);
+                transaction.commitAllowingStateLoss();
+                break;
+
         }
     }
 

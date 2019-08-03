@@ -1,4 +1,4 @@
-package com.testing.newapp.fragmentUI;
+package com.testing.newapp.fragmentUI.splitPayment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,50 +10,62 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
 
-public class PaymentInsertCard extends Fragment {
-    LinearLayout layViewDetails, layAmountInfoDropDown, layInputCard, layPayOptions, layPaymentProcessing;
+public class SplitPaymentFragment extends Fragment {
+    LinearLayout laySplitViewDetails, layAmountInfoDropDown, laySplitInputCard, laySplitPayOptions, laySplitPaymentProcessing;
     boolean isLayAmountInfoDropDownVisibility = false;
-    ImageView imaArrow1, imaArrow2, imgPayCard1, imPaymentProcessing;
-    Button butPay, butPaySlitPay;
+    ImageView imaArrow1, imaArrow2, imgPayCard1, imSplitProcessing;
+    Button butSplitPay, butSplitChange;
+    double calculateAmount = 0.0;
+    TextView txtAmount;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_payment_insert_card, container, false);
+        return inflater.inflate(R.layout.fragment_split_payment, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        layViewDetails = view.findViewById(R.id.layViewDetails);
+        laySplitViewDetails = view.findViewById(R.id.laySplitViewDetails);
         layAmountInfoDropDown = view.findViewById(R.id.layAmountInfoDropDown);
+        laySplitInputCard = view.findViewById(R.id.laySplitInputCard);
+        laySplitPayOptions = view.findViewById(R.id.laySplitPayOptions);
+        laySplitPaymentProcessing = view.findViewById(R.id.laySplitPaymentProcessing);
+        butSplitPay = view.findViewById(R.id.butSplitPay);
+        butSplitChange = view.findViewById(R.id.butSplitChange);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
         imaArrow2 = view.findViewById(R.id.imaArrow2);
-        layInputCard = view.findViewById(R.id.layInputCard);
-        layPayOptions = view.findViewById(R.id.layPayOptions);
-        layPaymentProcessing = view.findViewById(R.id.layPaymentProcessing);
-        butPay = view.findViewById(R.id.butPay);
-        butPaySlitPay = view.findViewById(R.id.butPaySlitPay);
         imgPayCard1 = view.findViewById(R.id.imgPayCard1);
-        imPaymentProcessing = view.findViewById(R.id.imPaymentProcessing);
+        txtAmount = view.findViewById(R.id.txtAmount);
+        imSplitProcessing = view.findViewById(R.id.imSplitProcessing);
 
         layAmountInfoDropDown.setVisibility(View.GONE);
-        layPayOptions.setVisibility(View.VISIBLE);
-        layPaymentProcessing.setVisibility(View.GONE);
+        laySplitPayOptions.setVisibility(View.VISIBLE);
+        laySplitPaymentProcessing.setVisibility(View.GONE);
+        try {
+            Bundle bundle = this.getArguments();
+            calculateAmount = bundle.getDouble("calculateAmount", 0.0);
+            txtAmount.setText("" + calculateAmount);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         imgPayCard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                layPayOptions.setVisibility(View.GONE);
-                layPaymentProcessing.setVisibility(View.VISIBLE);
+                laySplitPayOptions.setVisibility(View.GONE);
+                laySplitPaymentProcessing.setVisibility(View.VISIBLE);
             }
         });
 
-        layViewDetails.setOnClickListener(new View.OnClickListener() {
+        laySplitViewDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!isLayAmountInfoDropDownVisibility) {
@@ -69,7 +81,7 @@ public class PaymentInsertCard extends Fragment {
                 }
             }
         });
-        butPaySlitPay.setOnClickListener(new View.OnClickListener() {
+        butSplitChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isLayAmountInfoDropDownVisibility) {
@@ -81,7 +93,7 @@ public class PaymentInsertCard extends Fragment {
                 MainActivity.getInstance().loadFragmentUI("SplitAmountPayment", null);
             }
         });
-        butPay.setOnClickListener(new View.OnClickListener() {
+        butSplitPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isLayAmountInfoDropDownVisibility) {
@@ -90,13 +102,15 @@ public class PaymentInsertCard extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
+
             }
         });
-        imPaymentProcessing.setOnClickListener(new View.OnClickListener() {
+        imSplitProcessing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.getInstance().loadFragmentUI("PaymentSignature", null);
+                MainActivity.getInstance().loadFragmentUI("SplitPaymentSignature", null);
             }
         });
+
     }
 }

@@ -1,4 +1,4 @@
-package com.testing.newapp.fragmentUI;
+package com.testing.newapp.fragmentUI.splitPayment;
 
 import android.graphics.Color;
 import android.os.Build;

@@ -45,11 +45,12 @@
                     android:textColor="#000000"
                     android:textSize="36dp" />
 
-                <ProgressBar
+                <ImageView
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_10sdp" />
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:src="@drawable/ic_clock" />
 
                 <ImageView
                     android:layout_width="@dimen/_120sdp"

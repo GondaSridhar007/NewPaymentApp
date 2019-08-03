@@ -93,7 +93,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -220,8 +221,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_2ssp"
             android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="@dimen/_40sdp"
@@ -257,6 +257,7 @@
                 android:background="#A9DCC9">
 
                 <ImageView
+                    android:id="@+id/imSplitProcessing"
                     android:layout_width="@dimen/_150sdp"
                     android:layout_height="@dimen/_150sdp"
                     android:src="@drawable/ic_payment" />

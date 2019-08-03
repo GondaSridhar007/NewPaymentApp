@@ -1,4 +1,4 @@
-package com.testing.newapp.fragmentUI;
+package com.testing.newapp.fragmentUI.splitPayment;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -21,12 +21,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
 
 import java.io.FileOutputStream;
 
-public class PaymentSignatureFragment extends Fragment {
-    LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentSignature, layPaymentComplete;
+public class SplitPaymentSignatureFragment extends Fragment {
+    LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentSignature, layPaymentComplete, layNextPayment;
     boolean isLayAmountInfoDropDownVisibility = false;
     ImageView imaArrow1, imaArrow2;
     Button butSignatureSubmit, butSignatureClearSignature;
@@ -36,18 +37,20 @@ public class PaymentSignatureFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_payment_signature, container, false);
+        return inflater.inflate(R.layout.fragment_split_payment_signature, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         layViewDetails = view.findViewById(R.id.layViewDetails);
-        layAmountInfoDropDown = view.findViewById(R.id.layAmountInfoDropDown);
+        View includeLayAmountInfo = view.findViewById(R.id.includeLayAmountInfo);
+        layAmountInfoDropDown = includeLayAmountInfo.findViewById(R.id.layAmountInfoDropDown);
         layPaymentSignature = view.findViewById(R.id.layPaymentSignature);
         layPaymentComplete = view.findViewById(R.id.layPaymentComplete);
         butSignatureSubmit = view.findViewById(R.id.butSignatureSubmit);
         butSignatureClearSignature = view.findViewById(R.id.butSignatureClearSignature);
+        layNextPayment = view.findViewById(R.id.layNextPayment);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
         imaArrow2 = view.findViewById(R.id.imaArrow2);
 
@@ -55,7 +58,7 @@ public class PaymentSignatureFragment extends Fragment {
         layPaymentComplete.setVisibility(View.GONE);
         layAmountInfoDropDown.setVisibility(View.GONE);
 
-            layViewDetails.setOnClickListener(new View.OnClickListener() {
+        layViewDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!isLayAmountInfoDropDownVisibility) {
@@ -82,6 +85,12 @@ public class PaymentSignatureFragment extends Fragment {
                 }
                 layPaymentSignature.setVisibility(View.GONE);
                 layPaymentComplete.setVisibility(View.VISIBLE);
+            }
+        });
+        layNextPayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.getInstance().loadFragmentUI("PaymentInsert", null);
             }
         });
         LinearLayout laySignature = view.findViewById(R.id.laySignature);
