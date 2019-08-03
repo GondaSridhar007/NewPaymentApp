@@ -102,7 +102,7 @@ public class SplitPaymentFragment extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
-
+                MainActivity.getInstance().loadFragmentUI("CashPaymentApproval", null);
             }
         });
         imSplitProcessing.setOnClickListener(new View.OnClickListener() {

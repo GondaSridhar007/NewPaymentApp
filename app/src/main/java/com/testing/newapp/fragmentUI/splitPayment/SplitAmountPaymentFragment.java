@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.testing.newapp.MainActivity;
@@ -24,6 +26,9 @@ public class SplitAmountPaymentFragment extends Fragment {
     Button butPaySlitPay, butCancel;
     double totalAmount = 11770.00, calculateAmount = 11770.00;
     TextView txtTotalAmount;
+    LinearLayout layViewDetails, layAmountInfoDropDown;
+    boolean isLayAmountInfoDropDownVisibility = false;
+    ImageView imaArrow1, imaArrow2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,7 +43,29 @@ public class SplitAmountPaymentFragment extends Fragment {
         butPaySlitPay = view.findViewById(R.id.butPaySlitPay);
         butCancel = view.findViewById(R.id.butCancel);
         txtTotalAmount = view.findViewById(R.id.txtTotalAmount);
+        layViewDetails = view.findViewById(R.id.layViewDetails);
+        View includeLayAmountInfo = view.findViewById(R.id.includeLayAmountInfo);
+        layAmountInfoDropDown = includeLayAmountInfo.findViewById(R.id.layAmountInfoDropDown);
+        imaArrow1 = view.findViewById(R.id.imaArrow1);
+        imaArrow2 = view.findViewById(R.id.imaArrow2);
+        layAmountInfoDropDown.setVisibility(View.GONE);
 
+        layViewDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isLayAmountInfoDropDownVisibility) {
+                    layAmountInfoDropDown.setVisibility(View.VISIBLE);
+                    isLayAmountInfoDropDownVisibility = true;
+                    imaArrow1.setRotation(90);
+                    imaArrow2.setRotation(90);
+                } else {
+                    layAmountInfoDropDown.setVisibility(View.GONE);
+                    isLayAmountInfoDropDownVisibility = false;
+                    imaArrow1.setRotation(270);
+                    imaArrow2.setRotation(270);
+                }
+            }
+        });
         etTextAmount.addTextChangedListener(new TextWatcher() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             public void afterTextChanged(Editable charSequence) {
