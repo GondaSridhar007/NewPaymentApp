@@ -21,7 +21,7 @@ import com.testing.newapp.dataModel.CustomerDataModel;
 import com.testing.newapp.fragmentUI.cashPayment.CashPaymentApprovalFragment;
 import com.testing.newapp.fragmentUI.cashPayment.CashPaymentSignatureFragment;
 import com.testing.newapp.fragmentUI.payment.PaymentChargingFragment;
-import com.testing.newapp.fragmentUI.payment.PaymentDisconnected;
+import com.testing.newapp.fragmentUI.disconnect.CardDisconnectedFragment;
 import com.testing.newapp.fragmentUI.payment.PaymentInsertCard;
 import com.testing.newapp.fragmentUI.payment.PaymentSignatureFragment;
 import com.testing.newapp.fragmentUI.splitPayment.SplitAmountPaymentFragment;
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             case "Disconnected":
                 spinnerDropDown.setEnabled(false);
                 spinnerDropDown.setClickable(false);
-                Fragment disconnectedFragment = new PaymentDisconnected();
+                Fragment disconnectedFragment = new CardDisconnectedFragment();
                 transaction.replace(R.id.frameLoader, disconnectedFragment);
                 transaction.commitAllowingStateLoss();
                 break;
