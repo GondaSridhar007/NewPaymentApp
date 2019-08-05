@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
 
 import java.io.FileOutputStream;
@@ -42,6 +43,7 @@ public class PaymentSignatureFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        MainActivity.getInstance().setSpinnerHide(false);
         layViewDetails = view.findViewById(R.id.layViewDetails);
         View includeLayAmountInfo=view.findViewById(R.id.includeLayAmountInfo);
         layAmountInfoDropDown = includeLayAmountInfo.findViewById(R.id.layAmountInfoDropDown);
@@ -225,5 +227,6 @@ public class PaymentSignatureFragment extends Fragment {
             dirtyRect.top = Math.min(lastTouchY, eventY);
             dirtyRect.bottom = Math.max(lastTouchY, eventY);
         }
+
     }
 }

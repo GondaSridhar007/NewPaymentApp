@@ -22,6 +22,7 @@ public class CashDisconnectedFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        MainActivity.getInstance().setSpinnerHide(false);
         CardView cardTryAgain = view.findViewById(R.id.cardTryAgain);
         cardTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override

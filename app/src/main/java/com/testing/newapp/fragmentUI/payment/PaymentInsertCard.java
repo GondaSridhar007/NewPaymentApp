@@ -29,7 +29,7 @@ public class PaymentInsertCard extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        MainActivity.getInstance().setSpinnerHide(true);
         layViewDetails = view.findViewById(R.id.layViewDetails);
         layAmountInfoDropDown = view.findViewById(R.id.layAmountInfoDropDown);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
@@ -99,5 +99,6 @@ public class PaymentInsertCard extends Fragment {
                 MainActivity.getInstance().loadFragmentUI("PaymentSignature", null);
             }
         });
+
     }
 }

@@ -43,6 +43,7 @@ public class CashPaymentSignatureFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        MainActivity.getInstance().setSpinnerHide(false);
         layViewDetails = view.findViewById(R.id.layViewDetails);
         View includeLayAmountInfo = view.findViewById(R.id.includeLayAmountInfo);
         layAmountInfoDropDown = includeLayAmountInfo.findViewById(R.id.layAmountInfoDropDown);

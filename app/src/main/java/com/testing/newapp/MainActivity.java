@@ -83,65 +83,51 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         switch (type) {
             case "PaymentCharging":
-                spinnerDropDown.setVisibility(View.GONE);
                 Fragment paymentChargingFragment = new PaymentChargingFragment();
                 transaction.add(R.id.frameLoader, paymentChargingFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "PaymentInsert":
-                spinnerDropDown.setEnabled(true);
-                spinnerDropDown.setClickable(true);
-                spinnerDropDown.setVisibility(View.VISIBLE);
                 Fragment paymentInsertFragment = new PaymentInsertCard();
+                transaction.addToBackStack(paymentInsertFragment.getTag());
                 transaction.replace(R.id.frameLoader, paymentInsertFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "Disconnected":
-                spinnerDropDown.setEnabled(false);
-                spinnerDropDown.setClickable(false);
                 Fragment disconnectedFragment = new CardDisconnectedFragment();
                 transaction.replace(R.id.frameLoader, disconnectedFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "SplitPayment":
-                spinnerDropDown.setEnabled(true);
-                spinnerDropDown.setClickable(true);
                 Fragment splitPaymentFragment = new SplitPaymentFragment();
                 splitPaymentFragment.setArguments(bundle);
+                transaction.addToBackStack(splitPaymentFragment.getTag());
                 transaction.replace(R.id.frameLoader, splitPaymentFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "SplitAmountPayment":
-                spinnerDropDown.setEnabled(false);
-                spinnerDropDown.setClickable(false);
                 Fragment splitAmountPaymentFragment = new SplitAmountPaymentFragment();
+                transaction.addToBackStack(splitAmountPaymentFragment.getTag());
                 transaction.replace(R.id.frameLoader, splitAmountPaymentFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "PaymentSignature":
-                spinnerDropDown.setEnabled(false);
-                spinnerDropDown.setClickable(false);
                 Fragment paymentSignatureFragment = new PaymentSignatureFragment();
+                transaction.addToBackStack(paymentSignatureFragment.getTag());
                 transaction.replace(R.id.frameLoader, paymentSignatureFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "SplitPaymentSignature":
-                spinnerDropDown.setEnabled(false);
-                spinnerDropDown.setClickable(false);
                 Fragment splitPaymentSignatureFragment = new SplitPaymentSignatureFragment();
                 transaction.replace(R.id.frameLoader, splitPaymentSignatureFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "CashPaymentApproval":
-                spinnerDropDown.setEnabled(false);
-                spinnerDropDown.setClickable(false);
                 Fragment cashPaymentApprovalFragment = new CashPaymentApprovalFragment();
                 transaction.replace(R.id.frameLoader, cashPaymentApprovalFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "CashPaymentSignature":
-                spinnerDropDown.setEnabled(false);
-                spinnerDropDown.setClickable(false);
                 Fragment cashPaymentSignatureFragment = new CashPaymentSignatureFragment();
                 transaction.replace(R.id.frameLoader, cashPaymentSignatureFragment);
                 transaction.commitAllowingStateLoss();
@@ -199,16 +185,6 @@ public class MainActivity extends AppCompatActivity {
 
                                 }
                             });
-
-
-                            /*JSONObject customersRow = customers.getJSONObject(0);
-                            String CustomerId = customersRow.getString("CustomerId");
-                            String dailysheetid = customersRow.getString("dailysheetid");
-                            String FromState = customersRow.getString("FromState");
-                            String ToState = customersRow.getString("ToState");
-                            String Bol1Url = customersRow.getString("Bol1Url");
-                            String isPaymentexception = customersRow.getString("isPaymentexception");
-                            String FullName = customersRow.getString("FullName");*/
                         } else {
                             String err = response.message();
                             showToast(err, Toast.LENGTH_LONG);
@@ -224,12 +200,26 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                // if error occurs in network transaction then we can get the error in this method.
                 showToast(t.toString(), Toast.LENGTH_LONG);
                 progressDialog.dismiss(); //dismiss progress dialog
                 t.printStackTrace();
             }
         });
+    }
+
+    public void setSpinnerGone() {
+        spinnerDropDown.setVisibility(View.GONE);
+    }
+
+    public void setSpinnerHide(boolean isClick) {
+        spinnerDropDown.setVisibility(View.VISIBLE);
+        if (isClick) {
+            spinnerDropDown.setEnabled(true);
+            spinnerDropDown.setClickable(true);
+        } else {
+            spinnerDropDown.setEnabled(false);
+            spinnerDropDown.setClickable(false);
+        }
     }
 
     private String getJson(String strResp) {

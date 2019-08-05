@@ -28,7 +28,7 @@ public class CashPaymentApprovalFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        MainActivity.getInstance().setSpinnerHide(false);
         butCancelRequest = view.findViewById(R.id.butCancelRequest);
         imgCashPayment = view.findViewById(R.id.imgCashPayment);
         layViewDetails = view.findViewById(R.id.layViewDetails);

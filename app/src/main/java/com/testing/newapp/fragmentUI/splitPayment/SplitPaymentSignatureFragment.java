@@ -43,6 +43,7 @@ public class SplitPaymentSignatureFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        MainActivity.getInstance().setSpinnerHide(false);
         layViewDetails = view.findViewById(R.id.layViewDetails);
         View includeLayAmountInfo = view.findViewById(R.id.includeLayAmountInfo);
         layAmountInfoDropDown = includeLayAmountInfo.findViewById(R.id.layAmountInfoDropDown);
@@ -103,6 +104,7 @@ public class SplitPaymentSignatureFragment extends Fragment {
                 mSignature.clear();
             }
         });
+
     }
 
     public class signature extends View {

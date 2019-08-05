@@ -39,6 +39,7 @@ public class SplitAmountPaymentFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        MainActivity.getInstance().setSpinnerHide(false);
         etTextAmount = view.findViewById(R.id.etTextAmount);
         butPaySlitPay = view.findViewById(R.id.butPaySlitPay);
         butCancel = view.findViewById(R.id.butCancel);
