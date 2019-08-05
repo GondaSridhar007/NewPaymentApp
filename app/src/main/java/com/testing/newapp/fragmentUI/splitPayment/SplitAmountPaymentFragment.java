@@ -106,7 +106,7 @@ public class SplitAmountPaymentFragment extends Fragment {
         butCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.getInstance().loadFragmentUI("PaymentInsert", null);
+                getFragmentManager().popBackStack();
             }
         });
     }

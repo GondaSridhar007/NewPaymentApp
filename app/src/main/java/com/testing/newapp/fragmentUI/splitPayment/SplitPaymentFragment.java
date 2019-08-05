@@ -90,7 +90,7 @@ public class SplitPaymentFragment extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
-                MainActivity.getInstance().loadFragmentUI("SplitAmountPayment", null);
+                getFragmentManager().popBackStack();
             }
         });
         butSplitPay.setOnClickListener(new View.OnClickListener() {
