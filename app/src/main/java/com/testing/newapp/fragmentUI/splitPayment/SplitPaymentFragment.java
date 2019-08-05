@@ -32,7 +32,7 @@ public class SplitPaymentFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        MainActivity.getInstance().setSpinnerHide(true);
+        MainActivity.getInstance().setSpinnerHide(false);
         laySplitViewDetails = view.findViewById(R.id.laySplitViewDetails);
         layAmountInfoDropDown = view.findViewById(R.id.layAmountInfoDropDown);
         laySplitInputCard = view.findViewById(R.id.laySplitInputCard);
