@@ -17,6 +17,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
@@ -98,9 +100,16 @@ public class SplitAmountPaymentFragment extends Fragment {
         butPaySlitPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putDouble("calculateAmount", calculateAmount);
-                MainActivity.getInstance().loadFragmentUI("SplitPayment", bundle);
+                String amount = etTextAmount.getText().toString();
+                if (amount.length() != 0 && !amount.equals("")) {
+                    double enterAmount = Double.parseDouble(amount);
+                    Bundle bundle = new Bundle();
+                    bundle.putDouble("calculateAmount", enterAmount);
+                    MainActivity.getInstance().loadFragmentUI("SplitPayment", bundle);
+                } else {
+                    Toast.makeText(getActivity(), "Enter Some Amount", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
         butCancel.setOnClickListener(new View.OnClickListener() {

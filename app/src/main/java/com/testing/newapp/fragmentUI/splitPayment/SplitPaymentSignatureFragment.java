@@ -1,6 +1,7 @@
 package com.testing.newapp.fragmentUI.splitPayment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +23,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.testing.newapp.BroadcastManagerTag;
 import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
 
@@ -30,7 +33,7 @@ public class SplitPaymentSignatureFragment extends Fragment {
     LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentSignature, layPaymentComplete, layNextPayment;
     boolean isLayAmountInfoDropDownVisibility = false;
     ImageView imaArrow1, imaArrow2;
-    Button butSignatureSubmit, butSignatureClearSignature;
+    Button butSignatureSubmit, butSignatureClearSignature, butGoHome;
     signature mSignature;
     Bitmap bitmap;
 
@@ -54,6 +57,7 @@ public class SplitPaymentSignatureFragment extends Fragment {
         layNextPayment = view.findViewById(R.id.layNextPayment);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
         imaArrow2 = view.findViewById(R.id.imaArrow2);
+        butGoHome = view.findViewById(R.id.butGoHome);
 
         layPaymentSignature.setVisibility(View.VISIBLE);
         layPaymentComplete.setVisibility(View.GONE);
@@ -104,7 +108,15 @@ public class SplitPaymentSignatureFragment extends Fragment {
                 mSignature.clear();
             }
         });
-
+        butGoHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BroadcastManagerTag.SplashScreenPayment);
+                intent.putExtra("amount", "$200");
+                LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
+                getActivity().finish();
+            }
+        });
     }
 
     public class signature extends View {

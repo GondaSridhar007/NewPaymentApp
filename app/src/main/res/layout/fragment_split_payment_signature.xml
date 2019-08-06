@@ -52,8 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -187,7 +186,6 @@
                 android:textSize="36dp" />
 
             <LinearLayout
-                android:id="@+id/laySignature"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_80sdp"
                 android:layout_marginStart="@dimen/_20sdp"
@@ -195,7 +193,16 @@
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:background="@drawable/signature_bg_lay"
-                android:orientation="horizontal" />
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/laySignature"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_2ssp"
+                    android:orientation="horizontal" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -240,7 +247,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_2ssp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -407,6 +415,18 @@
                     android:textSize="28dp" />
 
             </LinearLayout>
+
+
+            <Button
+                android:id="@+id/butGoHome"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/_2ssp"
+                android:text="Go Home"
+                android:textColor="#FF000000"
+                android:textSize="28dp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
