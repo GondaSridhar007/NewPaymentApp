@@ -30,10 +30,10 @@ import com.testing.newapp.R;
 import java.io.FileOutputStream;
 
 public class SplitPaymentSignatureFragment extends Fragment {
-    LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentSignature, layPaymentComplete, layNextPayment;
+    LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentSignature;
     boolean isLayAmountInfoDropDownVisibility = false;
     ImageView imaArrow1, imaArrow2;
-    Button butSignatureSubmit, butSignatureClearSignature, butGoHome;
+    Button butSignatureSubmit, butSignatureClearSignature;
     signature mSignature;
     Bitmap bitmap;
 
@@ -51,16 +51,11 @@ public class SplitPaymentSignatureFragment extends Fragment {
         View includeLayAmountInfo = view.findViewById(R.id.includeLayAmountInfo);
         layAmountInfoDropDown = includeLayAmountInfo.findViewById(R.id.layAmountInfoDropDown);
         layPaymentSignature = view.findViewById(R.id.layPaymentSignature);
-        layPaymentComplete = view.findViewById(R.id.layPaymentComplete);
         butSignatureSubmit = view.findViewById(R.id.butSignatureSubmit);
         butSignatureClearSignature = view.findViewById(R.id.butSignatureClearSignature);
-        layNextPayment = view.findViewById(R.id.layNextPayment);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
         imaArrow2 = view.findViewById(R.id.imaArrow2);
-        butGoHome = view.findViewById(R.id.butGoHome);
-
         layPaymentSignature.setVisibility(View.VISIBLE);
-        layPaymentComplete.setVisibility(View.GONE);
         layAmountInfoDropDown.setVisibility(View.GONE);
 
         layViewDetails.setOnClickListener(new View.OnClickListener() {
@@ -88,16 +83,10 @@ public class SplitPaymentSignatureFragment extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
-                layPaymentSignature.setVisibility(View.GONE);
-                layPaymentComplete.setVisibility(View.VISIBLE);
+                MainActivity.getInstance().loadFragmentUI("SplitPaymentSuccess", null);
             }
         });
-        layNextPayment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MainActivity.getInstance().loadFragmentUI("PaymentInsert", null);
-            }
-        });
+
         LinearLayout laySignature = view.findViewById(R.id.laySignature);
         mSignature = new signature(getActivity(), null);
         mSignature.setBackgroundColor(Color.WHITE);
@@ -108,15 +97,7 @@ public class SplitPaymentSignatureFragment extends Fragment {
                 mSignature.clear();
             }
         });
-        butGoHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(BroadcastManagerTag.SplashScreenPayment);
-                intent.putExtra("amount", "$200");
-                LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
-                getActivity().finish();
-            }
-        });
+
     }
 
     public class signature extends View {

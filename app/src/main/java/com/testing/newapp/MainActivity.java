@@ -28,6 +28,7 @@ import com.testing.newapp.fragmentUI.payment.PaymentSignatureFragment;
 import com.testing.newapp.fragmentUI.splitPayment.SplitAmountPaymentFragment;
 import com.testing.newapp.fragmentUI.splitPayment.SplitPaymentFragment;
 import com.testing.newapp.fragmentUI.splitPayment.SplitPaymentSignatureFragment;
+import com.testing.newapp.fragmentUI.splitPayment.SplitPaymentSuccessFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -119,6 +120,13 @@ public class MainActivity extends AppCompatActivity {
                 transaction.replace(R.id.frameLoader, splitPaymentSignatureFragment);
                 transaction.commitAllowingStateLoss();
                 break;
+            case "SplitPaymentSuccess":
+                Fragment splitPaymentSuccessFragment = new SplitPaymentSuccessFragment();
+                transaction.addToBackStack(splitPaymentSuccessFragment.getTag());
+                transaction.replace(R.id.frameLoader, splitPaymentSuccessFragment);
+                transaction.commitAllowingStateLoss();
+                break;
+
             case "CashPaymentApproval":
                 Fragment cashPaymentApprovalFragment = new CashPaymentApprovalFragment();
                 transaction.addToBackStack(cashPaymentApprovalFragment.getTag());
