@@ -1,6 +1,5 @@
 package com.testing.newapp.fragmentUI.cashPayment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,26 +7,20 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.testing.newapp.MainActivity;
 import com.testing.newapp.R;
-import com.testing.newapp.signatureView.SignatureView;
 
-public class CashPaymentSignatureFragment extends Fragment {
-    LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentSignature;
+public class CashPaymentSuccessFragment extends Fragment {
+    LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentComplete, layNextPayment;
     boolean isLayAmountInfoDropDownVisibility = false;
     ImageView imaArrow1, imaArrow2;
-    Button butSignatureSubmit, butSignatureClearSignature;
-    SignatureView mSignature;
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cash_payment_signature, container, false);
+        return inflater.inflate(R.layout.fragment_cash_payment_success, container, false);
     }
 
     @Override
@@ -37,14 +30,10 @@ public class CashPaymentSignatureFragment extends Fragment {
         layViewDetails = view.findViewById(R.id.layViewDetails);
         View includeLayAmountInfo = view.findViewById(R.id.includeLayAmountInfo);
         layAmountInfoDropDown = includeLayAmountInfo.findViewById(R.id.layAmountInfoDropDown);
-        layPaymentSignature = view.findViewById(R.id.layPaymentSignature);
-        butSignatureSubmit = view.findViewById(R.id.butSignatureSubmit);
-        butSignatureClearSignature = view.findViewById(R.id.butSignatureClearSignature);
-
+        layPaymentComplete = view.findViewById(R.id.layPaymentComplete);
+        layNextPayment = view.findViewById(R.id.layNextPayment);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
         imaArrow2 = view.findViewById(R.id.imaArrow2);
-
-        layPaymentSignature.setVisibility(View.VISIBLE);
         layAmountInfoDropDown.setVisibility(View.GONE);
         layViewDetails.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,28 +51,12 @@ public class CashPaymentSignatureFragment extends Fragment {
                 }
             }
         });
-        butSignatureSubmit.setOnClickListener(new View.OnClickListener() {
+
+        layNextPayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isLayAmountInfoDropDownVisibility) {
-                    layAmountInfoDropDown.setVisibility(View.GONE);
-                    isLayAmountInfoDropDownVisibility = false;
-                    imaArrow1.setRotation(270);
-                    imaArrow2.setRotation(270);
-                }
-                MainActivity.getInstance().loadFragmentUI("CashPaymentSuccess", null);
-            }
-        });
-        LinearLayout laySignature = view.findViewById(R.id.laySignature);
-        mSignature = new SignatureView(getActivity(), null);
-        mSignature.setBackgroundColor(Color.WHITE);
-        laySignature.addView(mSignature, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        butSignatureClearSignature.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mSignature.clear();
+                MainActivity.getInstance().loadFragmentUI("PaymentInsert", null);
             }
         });
     }
-
 }
