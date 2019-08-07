@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarPayment"
@@ -19,13 +19,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
-                android:layout_centerVertical="true"
-                android:layout_margin="@dimen/_2sdp"
-                android:src="@drawable/ic_menu" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,8 +43,8 @@
             android:id="@+id/spinnerDropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:alpha="12"
-            android:gravity="center" />
+            android:gravity="center"
+            android:padding="@dimen/_6sdp" />
     </RelativeLayout>
 
     <FrameLayout

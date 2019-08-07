@@ -20,6 +20,7 @@ import com.testing.newapp.api.ApiInterface;
 import com.testing.newapp.dataModel.CustomerDataModel;
 import com.testing.newapp.fragmentUI.cashPayment.CashPaymentApprovalFragment;
 import com.testing.newapp.fragmentUI.cashPayment.CashPaymentSignatureFragment;
+import com.testing.newapp.fragmentUI.disconnect.CashDisconnectedFragment;
 import com.testing.newapp.fragmentUI.payment.PaymentChargingFragment;
 import com.testing.newapp.fragmentUI.disconnect.CardDisconnectedFragment;
 import com.testing.newapp.fragmentUI.payment.PaymentInsertCard;
@@ -93,11 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 transaction.replace(R.id.frameLoader, paymentInsertFragment);
                 transaction.commitAllowingStateLoss();
                 break;
-            case "Disconnected":
-                Fragment disconnectedFragment = new CardDisconnectedFragment();
-                transaction.replace(R.id.frameLoader, disconnectedFragment);
-                transaction.commitAllowingStateLoss();
-                break;
             case "SplitPayment":
                 Fragment splitPaymentFragment = new SplitPaymentFragment();
                 splitPaymentFragment.setArguments(bundle);
@@ -119,20 +115,34 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "SplitPaymentSignature":
                 Fragment splitPaymentSignatureFragment = new SplitPaymentSignatureFragment();
+                transaction.addToBackStack(splitPaymentSignatureFragment.getTag());
                 transaction.replace(R.id.frameLoader, splitPaymentSignatureFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "CashPaymentApproval":
                 Fragment cashPaymentApprovalFragment = new CashPaymentApprovalFragment();
+                transaction.addToBackStack(cashPaymentApprovalFragment.getTag());
                 transaction.replace(R.id.frameLoader, cashPaymentApprovalFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             case "CashPaymentSignature":
                 Fragment cashPaymentSignatureFragment = new CashPaymentSignatureFragment();
+                transaction.addToBackStack(cashPaymentSignatureFragment.getTag());
                 transaction.replace(R.id.frameLoader, cashPaymentSignatureFragment);
                 transaction.commitAllowingStateLoss();
                 break;
-
+            case "Disconnected":
+                Fragment disconnectedFragment = new CardDisconnectedFragment();
+                transaction.addToBackStack(disconnectedFragment.getTag());
+                transaction.replace(R.id.frameLoader, disconnectedFragment);
+                transaction.commitAllowingStateLoss();
+                break;
+            case "CashDisconnected":
+                Fragment cashDisconnectedFragment = new CashDisconnectedFragment();
+                transaction.addToBackStack(cashDisconnectedFragment.getTag());
+                transaction.replace(R.id.frameLoader, cashDisconnectedFragment);
+                transaction.commitAllowingStateLoss();
+                break;
         }
     }
 
