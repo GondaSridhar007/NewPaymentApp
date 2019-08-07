@@ -61,7 +61,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_100sdp"
+                    android:layout_height="@dimen/_120sdp"
                     android:layout_marginStart="@dimen/_40sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_40sdp"
@@ -77,7 +77,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginEnd="@dimen/_5sdp"
@@ -85,63 +85,51 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
-                    <android.support.v7.widget.CardView
+
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_weight="1"
-                        app:cardBackgroundColor="@color/colorWhite"
-                        app:cardCornerRadius="@dimen/_15sdp"
-                        app:elevation="@dimen/_5sdp">
+                        android:background="@drawable/ic_button_disconnected"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <LinearLayout
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:src="@drawable/ic_question_mark" />
+
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:orientation="horizontal">
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Get Support"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="24dp" />
+                    </LinearLayout>
 
-                            <ImageView
-                                android:layout_width="@dimen/_15sdp"
-                                android:layout_height="@dimen/_15sdp"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:src="@drawable/ic_question_mark" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
-                                android:text="Get Support"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="24dp" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_30sdp"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_weight="1"
-                        app:cardBackgroundColor="@color/colorWhite"
-                        app:cardCornerRadius="@dimen/_15sdp"
-                        app:elevation="@dimen/_5sdp">
+                        android:background="@drawable/ic_button_disconnected"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <LinearLayout
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
-                                android:text="Open Setting"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="24dp" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Open Setting"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="24dp" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
