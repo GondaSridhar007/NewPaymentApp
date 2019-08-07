@@ -25,6 +25,7 @@ import com.testing.newapp.fragmentUI.payment.PaymentChargingFragment;
 import com.testing.newapp.fragmentUI.disconnect.CardDisconnectedFragment;
 import com.testing.newapp.fragmentUI.payment.PaymentInsertCard;
 import com.testing.newapp.fragmentUI.payment.PaymentSignatureFragment;
+import com.testing.newapp.fragmentUI.payment.PaymentSuccessFragment;
 import com.testing.newapp.fragmentUI.splitPayment.SplitAmountPaymentFragment;
 import com.testing.newapp.fragmentUI.splitPayment.SplitPaymentFragment;
 import com.testing.newapp.fragmentUI.splitPayment.SplitPaymentSignatureFragment;
@@ -114,6 +115,13 @@ public class MainActivity extends AppCompatActivity {
                 transaction.replace(R.id.frameLoader, paymentSignatureFragment);
                 transaction.commitAllowingStateLoss();
                 break;
+            case "PaymentSuccess":
+                Fragment paymentSuccessFragment = new PaymentSuccessFragment();
+                transaction.addToBackStack(paymentSuccessFragment.getTag());
+                transaction.replace(R.id.frameLoader, paymentSuccessFragment);
+                transaction.commitAllowingStateLoss();
+                break;
+
             case "SplitPaymentSignature":
                 Fragment splitPaymentSignatureFragment = new SplitPaymentSignatureFragment();
                 transaction.addToBackStack(splitPaymentSignatureFragment.getTag());
@@ -126,7 +134,6 @@ public class MainActivity extends AppCompatActivity {
                 transaction.replace(R.id.frameLoader, splitPaymentSuccessFragment);
                 transaction.commitAllowingStateLoss();
                 break;
-
             case "CashPaymentApproval":
                 Fragment cashPaymentApprovalFragment = new CashPaymentApprovalFragment();
                 transaction.addToBackStack(cashPaymentApprovalFragment.getTag());

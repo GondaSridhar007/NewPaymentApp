@@ -27,7 +27,7 @@ import com.testing.newapp.R;
 import java.io.FileOutputStream;
 
 public class PaymentSignatureFragment extends Fragment {
-    LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentSignature, layPaymentComplete;
+    LinearLayout layViewDetails, layAmountInfoDropDown, layPaymentSignature;
     boolean isLayAmountInfoDropDownVisibility = false;
     ImageView imaArrow1, imaArrow2;
     Button butSignatureSubmit, butSignatureClearSignature;
@@ -45,20 +45,18 @@ public class PaymentSignatureFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         MainActivity.getInstance().setSpinnerHide(false);
         layViewDetails = view.findViewById(R.id.layViewDetails);
-        View includeLayAmountInfo=view.findViewById(R.id.includeLayAmountInfo);
+        View includeLayAmountInfo = view.findViewById(R.id.includeLayAmountInfo);
         layAmountInfoDropDown = includeLayAmountInfo.findViewById(R.id.layAmountInfoDropDown);
         layPaymentSignature = view.findViewById(R.id.layPaymentSignature);
-        layPaymentComplete = view.findViewById(R.id.layPaymentComplete);
         butSignatureSubmit = view.findViewById(R.id.butSignatureSubmit);
         butSignatureClearSignature = view.findViewById(R.id.butSignatureClearSignature);
         imaArrow1 = view.findViewById(R.id.imaArrow1);
         imaArrow2 = view.findViewById(R.id.imaArrow2);
 
         layPaymentSignature.setVisibility(View.VISIBLE);
-        layPaymentComplete.setVisibility(View.GONE);
         layAmountInfoDropDown.setVisibility(View.GONE);
 
-            layViewDetails.setOnClickListener(new View.OnClickListener() {
+        layViewDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!isLayAmountInfoDropDownVisibility) {
@@ -83,8 +81,7 @@ public class PaymentSignatureFragment extends Fragment {
                     imaArrow1.setRotation(270);
                     imaArrow2.setRotation(270);
                 }
-                layPaymentSignature.setVisibility(View.GONE);
-                layPaymentComplete.setVisibility(View.VISIBLE);
+                MainActivity.getInstance().loadFragmentUI("PaymentSuccess", null);
             }
         });
         LinearLayout laySignature = view.findViewById(R.id.laySignature);
